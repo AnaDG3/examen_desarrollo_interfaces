@@ -170,3 +170,7 @@ TipoPescado obtenerPescadoPorId(String id) {
 Barco obtenerBarcoPorId(String id) {
   return mockBarcos.firstWhere((b) => b.id == id);
 }
+
+Captura obtenerCapturaPorId(String id) {
+  return mockCapturas.firstWhere((p) => p.id == id);
+}

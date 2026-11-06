@@ -15,15 +15,22 @@ class PantallaPrincipal extends StatelessWidget {
 
   static TipoPescado gamba = obtenerPescadoPorId("PES-001");
   static Barco barcoGamba=obtenerBarcoPorId("BAR-001");
+  static Captura capturaGamba=obtenerCapturaPorId("CAP-001");
 
   static TipoPescado choco = obtenerPescadoPorId("PES-002");
-  static Barco barcoChoco=obtenerBarcoPorId("BAR-001");
+  static Barco barcoChoco=obtenerBarcoPorId("BAR-002");
+  static Captura capturaChoco=obtenerCapturaPorId("CAP-002");
+
 
   static TipoPescado atun = obtenerPescadoPorId("PES-004");
   static Barco barcoAtun=obtenerBarcoPorId("BAR-004");
+  static Captura capturaAtun=obtenerCapturaPorId("CAP-004");
+
 
   static TipoPescado sardina = obtenerPescadoPorId("PES-003");
   static Barco barcoSardina=obtenerBarcoPorId("BAR-003");
+  static Captura capturaSardina=obtenerCapturaPorId("CAP-003");
+
 
 
   @override
@@ -50,7 +57,7 @@ class PantallaPrincipal extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) =>
-                        PantallaSecundaria(pescado: gamba, barco: barcoGamba),
+                        PantallaSecundaria(pescado: gamba, barco: barcoGamba, captura: capturaGamba,),
                   ),
                 ), icon: Icon(Icons.chevron_right)),
                 leading: Container(child: Image.asset(gamba.imagenUrl, fit: BoxFit.cover)),
@@ -60,7 +67,7 @@ class PantallaPrincipal extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) =>
-                        PantallaSecundaria(pescado: choco, barco: barcoChoco),
+                        PantallaSecundaria(pescado: choco, barco: barcoChoco, captura: capturaChoco,),
                   ),
                 ), icon: Icon(Icons.chevron_right)),
                 leading: Container(child: Image.asset(choco.imagenUrl, fit: BoxFit.cover)),
@@ -70,7 +77,7 @@ class PantallaPrincipal extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) =>
-                        PantallaSecundaria(pescado: sardina, barco: barcoSardina),
+                        PantallaSecundaria(pescado: sardina, barco: barcoSardina, captura: capturaSardina,),
                   ),
                 ), icon: Icon(Icons.chevron_right)),
                 leading: Container(child: Image.asset(sardina.imagenUrl, fit: BoxFit.cover)),
@@ -80,7 +87,7 @@ class PantallaPrincipal extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) =>
-                        PantallaSecundaria(pescado: atun, barco: barcoAtun),
+                        PantallaSecundaria(pescado: atun, barco: barcoAtun, captura: capturaAtun,),
                   ),
                 ), icon: Icon(Icons.chevron_right)),
                 leading: Container(child: Image.asset(atun.imagenUrl, fit: BoxFit.cover)),
